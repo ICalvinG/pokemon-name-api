@@ -6,6 +6,8 @@ gem 'rails', github: "rails/rails"
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
+# Use json gem
+gem 'json'
 # Use Faker for seed data
 gem 'faker'
 # Use pry for debugging
