@@ -10,6 +10,8 @@ gem 'puma', '~> 3.0'
 gem 'json'
 # Use Faker for seed data
 gem 'faker'
+# Use Pokegem for pokemon data
+gem 'pokegem'
 # Use pry for debugging
 gem 'pry'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

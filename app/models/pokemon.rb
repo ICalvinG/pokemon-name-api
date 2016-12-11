@@ -1,5 +1,4 @@
 class Pokemon < ApplicationRecord
-  belongs_to :user
-
-  validates :name, uniqueness: true 
+  validates :name, uniqueness: true
+  serialize :moves 
 end
