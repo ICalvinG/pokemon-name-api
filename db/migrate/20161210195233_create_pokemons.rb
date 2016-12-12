@@ -4,6 +4,9 @@ class CreatePokemons < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :pokemon_type
       t.string :moves
+      t.boolean :evolves
+      t.integer :evolves_at_level
+      t.string :evolution
 
       t.timestamps
     end
