@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 20161210195233) do
 
   create_table "pokemons", force: :cascade do |t|
-    t.string "name"
-    t.string "pokemon_type"
+    t.string "name", null: false
+    t.string "pokemon_type", null: false
     t.string "moves"
-    t.boolean "evolves"
+    t.boolean "evolves", default: false
     t.integer "evolves_at_level"
     t.string "evolution"
     t.datetime "created_at", null: false
