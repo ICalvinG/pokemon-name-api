@@ -1,10 +1,10 @@
 class CreatePokemons < ActiveRecord::Migration[5.1]
   def change
     create_table :pokemons do |t|
-      t.string :name
-      t.string :pokemon_type
+      t.string :name, null: false
+      t.string :pokemon_type, null: false
       t.string :moves
-      t.boolean :evolves
+      t.boolean :evolves, default: :false
       t.integer :evolves_at_level
       t.string :evolution
 
