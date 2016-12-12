@@ -16,6 +16,9 @@ ActiveRecord::Schema.define(version: 20161210195233) do
     t.string "name"
     t.string "pokemon_type"
     t.string "moves"
+    t.boolean "evolves"
+    t.integer "evolves_at_level"
+    t.string "evolution"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
