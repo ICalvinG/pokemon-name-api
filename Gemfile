@@ -14,8 +14,10 @@ gem 'faker'
 gem 'pokegem'
 # Use pry for debugging
 gem 'pry'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.5'
+# Use jbuilder for serialization of models into JSON
+gem 'jbuilder'
+# Use kaminari for pagination
+gem 'kaminari'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
