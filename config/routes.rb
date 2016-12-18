@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 	# resources :pokemons
 
-	# get '/pokemons', to: "pokemons#index"
+	get 'api/pokemons', to: "api/pokemons#index"
 
 	namespace :api do
 		resources :pokemons
