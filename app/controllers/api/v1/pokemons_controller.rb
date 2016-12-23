@@ -1,14 +1,20 @@
 class Api::V1::PokemonsController < ApplicationController
   respond_to :json
 
+  # GET request
+  # http://localhost:3000/api/v1/pokemons
   def index
   	respond_with Pokemon.all
   end
 
+  # GET request
+  # http://localhost:3000/api/v1/pokemons/<id>
   def show
     respond_with Pokemon.find(params[:id])
   end
 
+  # POST request
+  # http://localhost:3000/api/v1/pokemons/
   def create
   	pokemon = Pokemon.new(pokemon_params) 
 
@@ -19,6 +25,8 @@ class Api::V1::PokemonsController < ApplicationController
   	end
   end
 
+  # PUT/PATCH request
+  # http://localhost:3000/api/v1/pokemons/<id>
   def update
     pokemon = Pokemon.find(params[:id])
 
@@ -29,6 +37,8 @@ class Api::V1::PokemonsController < ApplicationController
     end
   end
 
+  # DELETE request
+  # http://localhost:3000/api/v1/pokemons/<id>
   def destroy
     pokemon = Pokemon.find(params[:id])
     pokemon.destroy
