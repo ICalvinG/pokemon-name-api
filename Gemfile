@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Use devise gem for user authentication
+gem 'devise'
 # Add gem to serialize active record models
 gem 'active_model_serializers'
 # Use jquery as the JavaScript library
