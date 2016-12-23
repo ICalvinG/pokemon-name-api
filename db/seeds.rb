@@ -1,7 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+for count in 1..151
+	hash_string = Pokegem.get "pokemon", count
+	pretty_hash = JSON.parse(hash_string.gsub("'",'"').gsub('=>',':'))
+	moves_array = [] 
+	for int in 1..10
+		if !pretty_hash["moves"][int].nil?
+			moves_array << pretty_hash["moves"][int]["name"]
+		else
+			break
+		end
+	end
+	pokemon = Pokemon.new.tap do |poke|
+		poke[:name] = pretty_hash["name"];
+		poke[:pokemon_type] = pretty_hash["types"][0]["name"];
+		poke[:moves] = moves_array;
+		if !pretty_hash["evolutions"][0].nil?
+			poke[:evolves] = true
+			poke[:evolves_at_level] = pretty_hash["evolutions"][0]["level"]
+			poke[:evolution] = pretty_hash["evolutions"][0]["to"]
+		else
+			poke[:evolves] = false
+		end
+	end
+	pokemon.save
+	puts "Success for Pokemon Number #{count}"
+end
