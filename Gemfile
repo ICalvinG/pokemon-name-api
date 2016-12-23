@@ -16,6 +16,9 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+
+# Use pokegem gem for calling pokeapi
+gem 'pokegem'
 # Use devise gem for user authentication
 gem 'devise'
 # Add gem to serialize active record models
