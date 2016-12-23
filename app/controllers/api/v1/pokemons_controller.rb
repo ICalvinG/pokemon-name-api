@@ -11,12 +11,24 @@ class Api::V1::PokemonsController < ApplicationController
 
   def create
   	pokemon = Pokemon.new(pokemon_params) 
+
   	if pokemon.save
-  		render json: user, status: 201
+  		render json: pokemon, status: 201
   	else
-  		render json: { errors: user.errors}, status: 422
+  		render json: { errors: pokemon.errors}, status: 422
   	end
   end
+
+  def update
+    pokemon = Pokemon.find(params[:id])
+
+    if pokemon.update(pokemon_params)
+      render json: pokemon, status: 200
+    else
+      render json: { errors: pokemon.errors }, status: 422
+    end
+  end
+
 
   private
 
