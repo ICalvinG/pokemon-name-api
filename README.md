@@ -12,6 +12,11 @@ rails db:create && rails db:migrate && rails db:seed
 ```
 Your database will be complete on the success of your 151st pokemon.
 
+Now all you will need to do is to start up your server.
+```
+rails s
+```
+
 ## Making your request
 
 Make a GET request to see an index view of all your pokemon.
