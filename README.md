@@ -6,6 +6,12 @@ This is a RESTful API built in Rails containing 151 different Pokemon names.
 
 Once you've cloned the repository to your computer, navigate into the directory from your terminal.
 
+Install all required gems.
+
+```
+bundle install
+```
+
 Create, migrate, and seed your database. Seeding will take approximately 1 - 2 minutes depending on your internet connection.
 ```
 rails db:create && rails db:migrate && rails db:seed
